@@ -1,0 +1,62 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.FormFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/buttonCreatePerson"
+            android:layout_alignParentTop="true"
+            android:padding="@dimen/fragment_padding">
+
+            <TextView
+                android:id="@+id/textViewPersonName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/fragment_padding"
+                android:text="@string/person_name" />
+
+            <EditText
+                android:id="@+id/editTextFormPersonName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewPersonName"
+                android:layout_marginBottom="@dimen/fragment_padding"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/textViewPersonCountry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editTextFormPersonName"
+                android:layout_marginBottom="@dimen/fragment_padding"
+                android:text="@string/person_country" />
+
+            <Spinner
+                android:id="@+id/spinnerCountry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewPersonCountry"
+                android:layout_centerHorizontal="true" />
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/buttonCreatePerson"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorAccent"
+            android:text="@string/create_person"
+            android:textColor="@color/colorPrimaryText" />
+
+    </RelativeLayout>
+
+</FrameLayout>
